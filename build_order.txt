@@ -1,0 +1,7 @@
+1) Alter tasks table: drop category_id column;
+  1> ALTER TABLE tasks DROP COLUMN category_id;
+  2> GO
+2) Create a join table to connect categories and tasks:  category_tasks
+  1> CREATE TABLE categories_tasks (id INT IDENTITY(1,1), category_id int, task_id int);
+  2> GO
+3)
