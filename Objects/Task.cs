@@ -8,11 +8,14 @@ namespace ToDoList
   {
     private int _id;
     private string _description;
+    private bool _finished;
 
-    public Task(string Description, int Id = 0)
+    public Task(string Description, int Id = 0, bool Finished = false)
     {
       _id = Id;
       _description = Description;
+      _finished = Finished;
+
     }
 
     public override bool Equals(System.Object otherTask)
