@@ -1,0 +1,13 @@
+<h1>To Do List</h1>
+<hr />
+<h2>Edit category: @Model.GetName()</h2>
+<form action="/category/edit/@Model.GetId()" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <input name="category-id" type="hidden" value="@Model.GetId()">
+  <label for="category-name">Category name</label>
+  <input id="category-name" name="category-name" type="text">
+  <button type="submit">Submit</button>
+</form>
+<h4><a href="/">Return home</a></h4>
+
+@* Since web browsers can only make GET and POST requests, we need some way to communicate to our app that even though the form is submitted with the POST method, the server should treat it like a PATCH request. That's what the line <input name="_method" type="hidden" value="PATCH"> is for. It's a common way for forms to communicate to the server to treat the request as a different method than the "real" one it's actually using. *@
