@@ -129,7 +129,7 @@ namespace ToDoList
       Assert.Equal(testCategoryTasks, resultCategoryTasks);
     }
 
-    
+
     [Fact]
     public void Test_GetCategories_ReturnsAllTaskCategories()
     {
@@ -151,5 +151,22 @@ namespace ToDoList
       //Assert
       Assert.Equal(testList, result);
     }
+
+    [Fact]
+    public void Test_GetFinished_TaskStartsFinished_False()
+    {
+      Task testTask = new Task("Mow the lawn");
+      testTask.Save();
+
+
+
+    }
+
+
+
+
+
+
+
   }
 }

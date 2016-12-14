@@ -15,7 +15,6 @@ namespace ToDoList
       _id = Id;
       _description = Description;
       _finished = Finished;
-
     }
 
     public override bool Equals(System.Object otherTask)
@@ -28,8 +27,19 @@ namespace ToDoList
         Task newTask = (Task) otherTask;
         bool idEquality = this.GetId() == newTask.GetId();
         bool descriptionEquality = this.GetDescription() == newTask.GetDescription();
-        return (idEquality && descriptionEquality);
+        bool finishedEquality = this.GetFinished() == newTask.GetFinished();
+        return (idEquality && descriptionEquality && finishedEquality);
       }
+    }
+
+    public bool GetFinished()
+    {
+      return _finished;
+    }
+
+    public void SetFinished(bool Finished)
+    {
+      _finished = Finished;
     }
 
     public int GetId()
